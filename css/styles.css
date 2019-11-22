@@ -2,15 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
 }
 /* Base Styles */
 
 body {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-    background-color:#F3F3F3;
+    background-color: #E1E4FA;
     color: dimgrey;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Raleway', sans-serif;
 }
 
 li {
@@ -30,6 +35,13 @@ a:focus {
 
 header {
     text-align: center;
+    padding-bottom: 2.5em;
+}
+
+.navigation {
+    background-color:#6486D3;
+    color: #fff;
+    box-shadow: 0 1px 3px gray;
     padding: 1.5em 0 2.5em 0;
     margin-bottom: 1em;
 }
@@ -54,14 +66,22 @@ footer {
 .name {
     padding-bottom: 1em;
     font-size: 1.6em;
+    font-weight: 800;
 }
 
 .main-nav li a {
-    background-color:#fff;
+    background-color: #fff;
+    color: #6486D3;
     display: block;
     padding: .8em 0;
     margin: .5em 0;
     text-transform: uppercase;
+}
+
+.main-nav li a:hover,
+.main-nav li a:focus {
+    background-color: #E1E4FA;
+    text-decoration: underline;
 }
 
 .header-img {
@@ -80,15 +100,17 @@ p {
 .col {
     max-width: 100%;
     margin: 20px 10px;
-    min-height: 400px;
+    min-height: 330px;
 }
 #portfolio {
     background-color: #fff;
+    padding-bottom: 2em;
 }
-#portfolio,
-#contact {
-    padding-bottom: 3em;
+
+#portfolio .section-title {
+    padding-bottom: calc(3em - 20px);
 }
+
 #portfolio img {
     margin-bottom: 2em;
 }
@@ -98,7 +120,34 @@ p {
 }
 
 #portfolio p {
+    margin-bottom: 3em;
+}
+
+#skills {
+    background-color: #F0F0FF;
+    padding-bottom: 3em;
+    box-shadow: 0 1px 3px lightgray;
+}
+
+.my-skills {
     margin-bottom: 2em;
+}
+
+.my-skills li {
+    background-color: #635F6E;
+    color: #fff;
+    display: inline-block;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px lightgray;
+}
+
+.my-skills li:not(:last-child) {
+    margin-right: 1em;
+}
+
+#contact {
+    padding-bottom: 3em;
 }
 
 #contact p:first-of-type {
@@ -136,6 +185,7 @@ p {
 }
 
 /* Clearfix  */
+
 .clearfix::after {
     content: "";
     display: table;
@@ -148,20 +198,39 @@ p {
     .container {
         width: 80%;
     }
-    header {
-        padding-top: 40px;
+
+    .navigation {
+        padding: 2.5em 0 1.5em;
     }
+
+    .name {
+        padding-bottom: 0.2em;
+    }
+
     .main-nav li {
         display: inline-block;
         margin: 0 20px;
     }
+
     .main-nav li a {
-        background-color: #F3F3F3;
+        background-color: #6486D3;
+        color: #fff;
+        border: 2px solid #6486D3;
     }
+
+    .main-nav li a:hover,
+    .main-nav li a:focus {
+        color: #E1E4FA;
+        text-decoration: none;
+        background-color: #6486D3;
+        border: 2px dotted #E1E4FA;
+    }
+
     .header-img {
         float: right;
         width: 40%;
     }
+
     .intro {
         float: left;
         width: 60%;
@@ -170,27 +239,33 @@ p {
         font-size: 1.15em;
         text-align: left;
     }
+
     .col {
         float: left;
         width: calc(50% - 20px);
         margin-bottom: 0;
     }
+    
     .footer-nav {
-        display: inline-block;
+        display: block;
         float: right;
         text-transform: uppercase;
     }
+
     .footer-nav li {
         display: inline-block;
     }
+
     .footer-nav a {
         display: block;
         padding: 0.5em;
         margin: 0.3em;
     }
+
     .footer-name {
         padding: 0.5em;
     }
+
     .to-top {
         display: none;
     }
@@ -202,9 +277,11 @@ p {
         padding-bottom: 0;
         padding-top: 12.8px;
     }
+
     .main-nav {
         float: right;
     }
+
     .col {
         width: calc(33.33% - 20px);
     }
