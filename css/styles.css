@@ -100,7 +100,7 @@ p {
 .col {
     max-width: 100%;
     margin: 20px 10px;
-    min-height: 330px;
+    min-height: 370px;
 }
 #portfolio {
     background-color: #fff;
@@ -272,14 +272,23 @@ p {
 }
 
 @media (min-width: 1024px) {
+    .navigation {
+        padding: 1.5em 0;
+    }
+
     .name {
         float: left;
         padding-bottom: 0;
-        padding-top: 12.8px;
+        padding-top: 0.85em;
+        /* padding-top: 12.8px; */
     }
 
     .main-nav {
         float: right;
+    }
+
+    .main-nav li a {
+        font-size: 1.2em;
     }
 
     .col {
