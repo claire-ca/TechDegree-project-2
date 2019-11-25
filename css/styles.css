@@ -100,7 +100,7 @@ p {
 .col {
     max-width: 100%;
     margin: 20px 10px;
-    min-height: 370px;
+    min-height: 380px;
 }
 #portfolio {
     background-color: #fff;
@@ -133,7 +133,23 @@ p {
     margin-bottom: 2em;
 }
 
+.my-skills {
+    display: inline-block;
+    margin-bottom: 1em;
+}
 .my-skills li {
+    background-color: #635F6E;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px lightgray;
+    padding: 1em;
+}
+
+.my-skills li:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+/* .my-skills li {
     background-color: #635F6E;
     color: #fff;
     display: inline-block;
@@ -144,7 +160,7 @@ p {
 
 .my-skills li:not(:last-child) {
     margin-right: 1em;
-}
+} */
 
 #contact {
     padding-bottom: 3em;
@@ -246,6 +262,14 @@ p {
         margin-bottom: 0;
     }
     
+    .my-skills li {
+        display: inline-block;
+    }
+
+    .my-skills li:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 1em;
+    }
     .footer-nav {
         display: block;
         float: right;
